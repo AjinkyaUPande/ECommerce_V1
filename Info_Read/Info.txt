@@ -1,0 +1,41 @@
+Framework
+
+1) Analysis
+2) Design & Implementation
+3) Execution
+4) Maintenance - git, github , jenkins
+
+Note ->
+
+From workspace(Own device) to Local repository[Git] aka 'Commit'
+From Local Repository to the Remote repository[GitHub] aka 'Push'
+The code push by some other Workspace you can pull from the Remote Repository -> 'Pull'
+
+Workspace ->
+
+C:\Users\apande\PycharmProjects\nopCommerce_V1
+
+Remote repository ->
+
+https://github.com/AjinkyaUPande/nopCommerce_V1.git
+
+Git Workflow ---------------
+
+1) Git init  --> Create an empty git repo (Local Repository)
+
+    -> .git repo get created & it is by default Hidden
+    -> Created in local system (Project loc itself)
+
+2) git config --global user.name "AjinkyaUPande"
+   git config --global user.email "pandeajinkya55@gmail.com"
+
+   -> These two commands use only 1st time when you using the git in system
+   -> that means the git will remember you
+
+3) git status --> tells status of files which are tracked, untracked, committed &
+                 pushed to the remote repository
+
+4)git add -A           --> Add all files to staging Area   (This proj use this firstly)
+  git add fileName.txt --> to add specific file
+  git add *.py         --> add all files having .py extension
+
