@@ -6,3 +6,5 @@ pytest-xdist
 openpyxl
 allure-pytest
 pytest~=7.4.4
+
+
