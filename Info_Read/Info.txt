@@ -34,8 +34,74 @@ Git Workflow ---------------
 
 3) git status --> tells status of files which are tracked, untracked, committed &
                  pushed to the remote repository
+              --> use frequently what files at what stage
 
-4)git add -A           --> Add all files to staging Area   (This proj use this firstly)
-  git add fileName.txt --> to add specific file
+4)git add -A           --> Add all files to staging/indexing Area   (This proj use this firstly)
+  git add fileName.txt --> to add specific file to staging
   git add *.py         --> add all files having .py extension
+
+5) git commit -m "this is my first commit" --> commit with comment
+
+   --> this will commit all files in the staging area to git repo
+
+   note --> Initially all the files in red color
+        --> after added to staging area it will be in green color
+        --> after doing commit files get converted into white color
+
+        --> git repo will not store the files
+        --> it will stores the commit to the files only
+        --> it will remember those changes
+
+   Note -> for pushing the files to remote repo the Github process is needed to follow
+
+----------------------
+Github
+----------------------
+
+1) Create/ have account in Github
+2) Login to GitHub & create the empty git repo
+
+   -> Remote repo url
+   -> https://github.com/AjinkyaUPande/nopCommerce_V1.git
+
+6) Push your code into the remote repository
+
+   -> git remote add origin https://github.com/AjinkyaUPande/nopCommerce_V1.git
+
+       --> above command connect the local repo to the remote repo
+       --> execute only once
+
+   -> git push -u origin master
+
+       --> This will push the code to the remote repository
+
+       --> just go the project location & open git bash start doing push operation
+           start with git status
+
+   tokan  -> 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
+
+7) How to update the changes inside the git.
+
+   -> git pull origin master
+
+      --> This command will pull all new changes which created inside git repo
+          by you or anyone inside the local repository.
+
+      --> that changes like (newly created files) will reflect in your local machine after
+          running this command.
+
+      --> pull files from remote to local
+
+   -> Changes made in local repo in pycharm -> need to push to remote repository
+
+      --> Go tru same process
+      --> Ex -> Changes made in Readme file then
+
+      --> git status
+      --> git add <file_Name>
+      --> git commit -m "changes made in <file_name>"
+      --> git push -u origin
+
+      --> put name of the file you made changes.
+
 
