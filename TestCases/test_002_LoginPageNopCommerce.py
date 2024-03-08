@@ -12,7 +12,7 @@ class Test_002_LoginPageNopCommerce:
     logger = LogGen.loggen()
     user = ReadConfig.getUserMail()
 
-    @pytest.mark.sanity
+    @pytest.mark.regression
     def test_loginPage(self, setup):
         self.logger.info("*** test_002_LoginPageNopCommerce Started ***")
         self.driver = setup

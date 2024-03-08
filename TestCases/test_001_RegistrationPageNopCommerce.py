@@ -11,6 +11,7 @@ class Test_001_RegistrationPageNopCommerce:
     baseURL = ReadConfig.getApplicationURL()
     logger = LogGen.loggen()
     password = ReadConfig.getPassword()
+    mail = randomString.RandomStringGenerator() + "@gmail.com"
 
     @pytest.mark.regression
     def test_RegistrationPage(self, setup):
@@ -36,9 +37,8 @@ class Test_001_RegistrationPageNopCommerce:
         self.registration_Obj.DayOfBirth("1")
         self.registration_Obj.MonthOfBirth("October")
         self.registration_Obj.YearOfBirth("2009")
-        self.email = randomString.RandomStringGenerator() + "@gmail.com"
-        self.registration_Obj.AddEmail(self.email)
-        # self.registration_Obj.AddEmail("KumarMahesh09@gmail.com")
+        self.registration_Obj.AddEmail(self.mail)
+        # self.registration_Obj.AddEmail("MaheshKumar09@gmail.com")
         self.registration_Obj.AddCompanyName("IBM")
         # self.registration_Obj.SelectNewsletter()
         self.registration_Obj.CreatePassword(self.password)

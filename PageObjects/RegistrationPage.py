@@ -4,7 +4,6 @@ from selenium.webdriver.support.ui import Select
 
 
 class Registration_Page:
-
     # Locators
     lnk_registration_xpath = "//a[@class='ico-register']"
     radio_gender_xpath = "//input[@id='gender-male']"
@@ -19,7 +18,7 @@ class Registration_Page:
     txt_month_xpath = "//*[@name='DateOfBirthMonth']"
     txt_year_xpath = "//*[@name='DateOfBirthYear']"
     btn_register_xpath = "//button[contains(text(),'Register')]"  # //button[@id='register-button']
-    txt_msg_confirm_xpath = "//*[contains(text(),'Your registration completed')]" #//*[@class="result"]
+    txt_msg_confirm_xpath = "//*[contains(text(),'Your registration completed')]"  # //*[@class="result"]
 
     # Constructor
 
@@ -70,6 +69,21 @@ class Registration_Page:
 
     def ClickRegisterBtn(self):
         self.driver.find_element(By.XPATH, self.btn_register_xpath).click()
+
+    def AddRegistrationDetails(self, firstname, lastname, inp_day, inp_month, inp_year, email, company, password):
+        self.driver.find_element(By.XPATH, self.radio_gender_xpath).click()
+        self.driver.find_element(By.XPATH, self.txt_firstname_xpath).send_keys(firstname)
+        self.driver.find_element(By.XPATH, self.txt_lastname_xpath).send_keys(lastname)
+        date = Select(self.driver.find_element(By.XPATH, self.txt_date_xpath))
+        date.select_by_visible_text(inp_day)
+        month = Select(self.driver.find_element(By.XPATH, self.txt_month_xpath))
+        month.select_by_visible_text(inp_month)
+        year = Select(self.driver.find_element(By.XPATH, self.txt_year_xpath))
+        year.select_by_visible_text(inp_year)
+        self.driver.find_element(By.XPATH, self.txt_email_xpath).send_keys(email)
+        self.driver.find_element(By.XPATH, self.txt_companyName_xpath).send_keys(company)
+        self.driver.find_element(By.XPATH, self.txt_password_xpath).send_keys(password)
+        self.driver.find_element(By.XPATH, self.txt_confirmPassword_xpath).send_keys(password)
 
     def VerificationRegistration(self):
         try:

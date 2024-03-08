@@ -104,4 +104,22 @@ Github
 
       --> put name of the file you made changes.
 
+----------------------------------------------------------------------------------
+
+Jenkins
+
+-> Continuous Integration tool
+-> Its java based application
+-> Create folder as jenkins in C drive
+-> put that downloaded jenkins.war file in it
+-> at that location open CMD as administrator
+-> run "java -jar jenkins.war"
+-> if not work then run
+-> "java -jar jenkins.war --enable-future-java"
+-> until unless cmd is on you can work with the jenkins
+-> It gives passkey
+   --> 7bd12fccbabd45f3aab8866ecdad17e1
+-> In browser open "https://localhost:8080/"
+-> Ask for pass -> put the above key in that -> only 1 time use
+-> Key used for unlocking jenkins
 

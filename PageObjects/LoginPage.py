@@ -29,6 +29,10 @@ class LoginPage:
     def ClickLoginBtn(self):
         self.driver.find_element(By.XPATH, self.btn_login_xpath).click()
 
+    def LoginDetails(self, email, password):
+        self.driver.find_element(By.XPATH, self.txt_email_xpath).send_keys(email)
+        self.driver.find_element(By.XPATH, self.txt_password_xpath).send_keys(password)
+
     def GetMsg(self):
         try:
             return self.driver.find_element(By.XPATH, self.msg_confirmation_xpath).is_displayed()
